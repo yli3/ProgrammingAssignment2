@@ -1,8 +1,9 @@
 ## makeCacheMatrix
 ##  
-##  Accepts a passed square invertible matrix, and creates a closure by
-##  returning a list of functions. These functions access and set cached
-##  values for the passed matrix x, and its inverse inv.
+##  Accepts a passed square invertible matrix, and creates a special object
+##  which caches both that matrix, and its inverse in the resultant closure. 
+##  These cached values are accessible to set/get functions returned by
+##  makeCacheMatrix via the global assignment operator <<-.
 ##
 ##  Args: 
 ##    x = square invertible matrix (empty by default)
@@ -56,8 +57,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve
 ##
-##  This function is passed a closure created by makeCacheMatrix and returns 
-##  the inverse of the square invertible matrix x within that closure.
+##  This function is passed a return object from makeCacheMatrix and returns 
+##  the inverse of the square invertible matrix x within that object's closure.
 ##
 ##  If no stored inverse exists within the passed closure, a new inverse will 
 ##  be calculated using the stored matrix.
