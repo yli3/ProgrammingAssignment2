@@ -1,18 +1,23 @@
 ## makeCacheMatrix
 ##  
-##  Creates a matrix object that can cache its inverse value.
+##  Accepts a passed square invertible matrix, and creates a closure by
+##  returning a list of functions. These functions access and set cached
+##  values for the passed matrix x, and its inverse inv.
 ##
 ##  Args: 
-##    x = matrix (empty by default)
+##    x = square invertible matrix (empty by default)
+##  Data:
+##    x = cached a square invertible matrix
+##    inv = cached inverse matrix (NULL by default)
 ##  Returns:
 ##    function list comprising:
 ##      - getInverse (obtains inverse of x, if available)
 ##      - setInverse (sets inverse of x)
 ##      - get (obtains x)
 ##      - set (sets x)
-##
+##  
 ##  Error Handling:
-##    None. A square invertible matrix x is assumed, and the class of x
+##    None. A square invertible matrix x is assumed, but the class of x
 ##    is not enforced.
 
 makeCacheMatrix <- function(x = matrix()) {
