@@ -51,13 +51,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve
 ##
-##  This function returns the inverse of the passed 
-##  makeCacheMatrix return enclosure.
+##  This function is passed a closure created by makeCacheMatrix and returns 
+##  the inverse of the square invertible matrix x within that closure.
+##
+##  If no stored inverse exists within the passed closure, a new inverse will 
+##  be calculated using the stored matrix.
 ##  
-##  If no stored inverse exists within the enclosure, a new one will be
-##  calculated based on the stored matrix. 
-##  
-##  If a stored inverse exists, then it will be retrieved and returned.
+##  If a stored inverse already exists, then it will be retrieved and returned.
 ##
 ##  Args:
 ##    x = a return of makeCacheMatrix
