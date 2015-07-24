@@ -76,8 +76,7 @@ cacheSolve <- function(x, ...) {
   # If inv does not yet exist, calculate and set inv.
   if(is.null(inv)) {
     
-    m <- x$get()
-    inv <- solve(m, ...) # solve may accept further ... args.
+    inv <- solve(x$get(), ...) # solve may accept further ... args.
     
     x$setInverse(inv)
     
