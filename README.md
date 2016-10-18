@@ -1,3 +1,8 @@
+### Preamble
+Forked from rdpeng/ProgrammingAssignment2, the repository for the peer-reviewed programming assignment in the JHU DSS R Programming coursera class. 
+
+Work completed in a separate branch. Original README text below.
+
 ### Introduction
 
 This second programming assignment will require you to write an R
